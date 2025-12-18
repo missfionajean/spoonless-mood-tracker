@@ -69,6 +69,9 @@ export default function Calendar() {
     console.log("GetMonth:", currentDate.getMonth());
     console.log("GetFullYear:", currentDate.getFullYear());
 
+    // state variable to hold sample data (will be replaced with API call later)
+    const [userMonthData, setUserMonthData] = useState(sampleMonthData);
+
 	return (
 		<div className="full-calendar">
 			<div className="month-navigator">
@@ -107,11 +110,11 @@ export default function Calendar() {
 						}
 						// adds CSS colors for days with data, gray if none
 						style={
-							sampleMonthData[
-								`${currentYear.toString()}-${(currentMonth + 1).toString().padStart(2, "0")}-${(day + 1).toString().padStart(2, "0")}` as keyof typeof sampleMonthData
+                            // refine this later to be less AI-like
+							userMonthData[
+								`${currentYear.toString()}-${(currentMonth + 1).toString().padStart(2, "0")}-${(day + 1).toString().padStart(2, "0")}` as keyof typeof userMonthData
 							] ?
                             // this will need to be turned into a function above (or in a separate utils file)
-							// { background: "linear-gradient(90deg, red, green, blue)" }
                             {background: "conic-gradient(red, green, blue)"}
                             :
 							{ backgroundColor: "gray" }
