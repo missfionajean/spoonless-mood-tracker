@@ -1,12 +1,14 @@
 // this will hold the emotion wheel, notes and buttons
 // try using the react bits circular gallery widget for the emotion wheel
-import EmotionWheel from "./EmotionWheel";
+// import EmotionWheel from "./EmotionWheel";
+import HalfCircleSpinnerDemo from "./HalfCircleImageSpinner";
 
 export default function DayTray() {
 	return (
 		<>
 			{/* wheel needs to be in its own file */}
-			<EmotionWheel />
+			{/* <EmotionWheel /> */}
+            <HalfCircleSpinnerDemo />
 
 			{/* notes input doesn't need own file */}
 			<label htmlFor="notes-input"></label>
