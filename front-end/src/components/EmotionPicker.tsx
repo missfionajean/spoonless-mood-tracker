@@ -72,13 +72,36 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
 		<div
 			style={{
 				width: size + 64,
-				height: radius,
+				height: radius + 32,
 				overflow: "hidden",
 				margin: "0 auto",
-                position: "relative",
-                border: "1px solid white",
+				position: "relative",
+				// border: "1px solid white",
 			}}
 		>
+            {/* Preview Gradient */}
+			<div
+				style={{
+					position: "absolute",
+					top: radius + 32,
+					left: radius + 32,
+					width: 172,
+					height: 172,
+					borderRadius: "50%",
+					background: "dimgray",
+					transform: "translate(-50%, -50%)",
+					zIndex: 1,
+					pointerEvents: "none",
+                    textAlign: "center",
+                    lineHeight: "96px",
+                    fontSize: "3.5em",
+                    color: "white",
+				}}
+			>
+                30
+            </div>
+
+            {/* Spinning Wheel */}
 			<div
 				onPointerDown={onPointerDown}
 				onPointerMove={onPointerMove}
@@ -86,12 +109,13 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
 				onPointerLeave={onPointerUp}
 				style={{
 					position: "absolute",
-                    top: 32,
-                    left: 32,
+					top: 32,
+					left: 32,
 					width: size,
 					height: size,
 					touchAction: "none",
 					userSelect: "none",
+                    zIndex: 0,
 				}}
 			>
 				{images.map((img, index) => {

@@ -17,24 +17,18 @@ export default function DayTray() {
 			{/* wheel needs to be in its own file */}
 			<EmotionPicker />
 
-			{/* <div
-				style={{
-					height: "20px",
-					borderRadius: "50%",
-					backgroundColor: "white",
-				}}
-			></div> */}
-
 			{/* notes input doesn't need own file */}
 			<label htmlFor="notes-input"></label>
 			<textarea
 				className="notes-input"
 				style={{
-					border: "1px solid white",
-					width: "320px",
+					width: "360px",
 					height: "75px",
 					color: "white",
 					padding: "10px",
+                    marginTop: "0.2em",
+                    marginBottom: "0.5em",
+                    borderRadius: "10px",
 				}}
 				placeholder={"Add a note here (Optional)"}
 			/>
@@ -46,7 +40,7 @@ export default function DayTray() {
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "center",
-					width: "320px",
+					width: "360px",
 					color: "white",
 				}}
 			>

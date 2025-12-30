@@ -126,7 +126,7 @@ export default function Calendar() {
 										background:
 											"conic-gradient(#8EC73F 33%, #FFC40F 66%, #02AFEF)",
 								  }
-								: { backgroundColor: "gray" }
+								: { backgroundColor: "dimgray" }
 						}
 						// add 1 because days are 0 indexed
 						onClick={() => handleDayClick(day + 1)}
