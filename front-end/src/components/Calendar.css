@@ -19,7 +19,7 @@
 
 .month-arrows {
     font-size: 1em;
-    border-radius: 25px;
+    border-radius: 50%;
     width: 2em;
     height: 2em;
     background-color: gray;
@@ -30,6 +30,7 @@
     grid-template-columns: repeat(7, 1fr);
     gap: 0.5rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .weekday-label {
@@ -44,7 +45,7 @@
 }
 
 .day-circle {
-    border-radius: 20px;
+    border-radius: 50%;
     width: 2.5em;
     height: 2.5em;
     align-content: center;
@@ -52,7 +53,7 @@
 }
 
 .day-circle-today {
-    border-radius: 20px;
+    border-radius: 50%;
     width: 2.5em;
     height: 2.5em;
     align-content: center;

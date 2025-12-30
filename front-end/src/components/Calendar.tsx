@@ -31,8 +31,8 @@ export default function Calendar() {
 	const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
 	const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
 
-    // state variable for selected date (may need to be lifted to parent component)
-    const [selectedDate, setSelectedDate] = useState<Date | null>(currentDate);
+	// state variable for selected date (may need to be lifted to parent component)
+	const [selectedDate, setSelectedDate] = useState<Date | null>(currentDate);
 
 	// creates date object to get no. of days in month
 	const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -55,22 +55,22 @@ export default function Calendar() {
 		);
 	};
 
-    // function for rendering selected date
-    const handleDayClick = (day: number) => {
-        // create new date object based on clicked day
-        const clickedDate = new Date(currentYear, currentMonth, day);
-        setSelectedDate(clickedDate);
-        // debugging log for clicked date
-        // console.log("Selected date:", clickedDate);
-    };
+	// function for rendering selected date
+	const handleDayClick = (day: number) => {
+		// create new date object based on clicked day
+		const clickedDate = new Date(currentYear, currentMonth, day);
+		setSelectedDate(clickedDate);
+		// debugging log for clicked date
+		// console.log("Selected date:", clickedDate);
+	};
 
 	// debugging logs for date objects
-    console.log("GetDate:", currentDate.getDate());
-    console.log("GetMonth:", currentDate.getMonth());
-    console.log("GetFullYear:", currentDate.getFullYear());
+	console.log("GetDate:", currentDate.getDate());
+	console.log("GetMonth:", currentDate.getMonth());
+	console.log("GetFullYear:", currentDate.getFullYear());
 
-    // state variable to hold sample data (will be replaced with API call later)
-    const [userMonthData, setUserMonthData] = useState(sampleMonthData);
+	// state variable to hold sample data (will be replaced with API call later)
+	const [userMonthData, setUserMonthData] = useState(sampleMonthData);
 
 	return (
 		<div className="full-calendar">
@@ -110,19 +110,28 @@ export default function Calendar() {
 						}
 						// adds CSS colors for days with data, gray if none
 						style={
-                            // refine this later to be less AI-like
+							// refine this later to be less AI-like
 							userMonthData[
-								`${currentYear.toString()}-${(currentMonth + 1).toString().padStart(2, "0")}-${(day + 1).toString().padStart(2, "0")}` as keyof typeof userMonthData
-							] ?
-                            // this will need to be turned into a function above (or in a separate utils file)
-                            {background: "conic-gradient(red, green, blue)"}
-                            :
-							{ backgroundColor: "gray" }
+								`${currentYear.toString()}-${(currentMonth + 1)
+									.toString()
+									.padStart(2, "0")}-${(day + 1)
+									.toString()
+									.padStart(
+										2,
+										"0"
+									)}` as keyof typeof userMonthData
+							]
+								? // this will need to be turned into a function above (or in a separate utils file)
+								  {
+										background:
+											"conic-gradient(#8EC73F 33%, #FFC40F 66%, #02AFEF)",
+								  }
+								: { backgroundColor: "dimgray" }
 						}
-                        // add 1 because days are 0 indexed
-                        onClick={() => handleDayClick(day + 1)}
+						// add 1 because days are 0 indexed
+						onClick={() => handleDayClick(day + 1)}
 					>
-                        {/* displayed day number */}
+						{/* displayed day number */}
 						{day + 1}
 					</span>
 				))}

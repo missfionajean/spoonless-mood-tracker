@@ -11,12 +11,17 @@ function Dashboard() {
 				flexWrap: "wrap",
 				justifyContent: "center",
 				alignItems: "center",
-				height: "100vh",
+				width: "100vw",
 				backgroundColor: "black",
-				paddingBlock: "10px",
 			}}
 		>
-			<Calendar />
+			<div
+				style={{
+					// border: "1px solid white",
+				}}
+			>
+				<Calendar />
+			</div>
 			<DayTray />
 		</div>
 	);
