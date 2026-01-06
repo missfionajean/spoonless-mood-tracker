@@ -13,7 +13,7 @@ type SpinnerImage = {
 	src: string; // path from /public
 };
 
-type EmotionWheelProps = {
+type SpoonWheelProps = {
 	images: SpinnerImage[];
 	selected: SpinnerImage[];
 	setSelected: React.Dispatch<React.SetStateAction<SpinnerImage[]>>;
@@ -28,7 +28,7 @@ const normalize = (deg: number) => ((deg % 360) + 360) % 360;
 
 /* Spinner Component */
 
-const EmotionWheel: React.FC<EmotionWheelProps> = ({
+const SpoonWheel: React.FC<SpoonWheelProps> = ({
 	images,
 	selected,
 	setSelected,
@@ -96,6 +96,7 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
 		"8": "#FFC40F",
 	};
 
+	// THIS NEEDS TO BE SIMPLIFIED AS MUCH AS POSSIBLE; RIGHT NOW, IT'S UNWIELDY AND HARD TO ADJUST - NEXT STEPS SHOULD BE CREATING CLEARER LOGIC, EVEN IF IT TAKES MORE LINES OF CODE (THIS LOGIC CAN BE STORED IN A SEPARATE FILE AND IMPORTED)
 	const colorPreview =
 		selected.length >= 1
 			? (() => {
@@ -107,7 +108,7 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
 					return `conic-gradient(
           from -90deg at 50% 50%,
           ${selected
-                // uses index to calculate start and end angles for each color portion
+				// uses index to calculate start and end angles for each color portion
 				.map((img, i) => {
 					const start = i * portion;
 					const end = (i + 1) * portion;
@@ -251,10 +252,11 @@ export default function EmotionPicker() {
 	const [selected, setSelected] = useState<SpinnerImage[]>([]);
 
 	return (
-		<EmotionWheel
+		<SpoonWheel
 			images={IMAGES}
 			selected={selected}
 			setSelected={setSelected}
 		/>
 	);
 }
+// MOVE SPOON WHEEL TO ITS OWN FILE!!

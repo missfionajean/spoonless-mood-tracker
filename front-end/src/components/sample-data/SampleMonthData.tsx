@@ -15,18 +15,18 @@ const sampleMonthData = {
 		emotions: ["excited", "angry", "happy"],
 		notes: "Went for a run and felt amazing!",
 	},
-    "2025-12-15": {
-        emotions: ["relaxed", "happy"],
-        notes: "Had a relaxing day with friends.",
-    },
-    "2025-12-20": {
-        emotions: ["depressed", "tense"],
-        notes: "Feeling overwhelmed with everything.",
-    },
-    "2025-12-25": {
-        emotions: ["happy", "excited"],
-        notes: "Celebrated Christmas with family!",
-    },
+	"2025-12-15": {
+		emotions: ["relaxed", "happy"],
+		notes: "Had a relaxing day with friends.",
+	},
+	"2025-12-20": {
+		emotions: ["depressed", "tense"],
+		notes: "Feeling overwhelmed with everything.",
+	},
+	"2025-12-25": {
+		emotions: ["happy", "excited"],
+		notes: "Celebrated Christmas with family!",
+	},
 };
 
 // you can do a SQL table that has date (YYYY-MM-DD) as primary key (which you will use to do a search when a month is rendered) and columns for emotions (up to three) and notes (varchar(255))

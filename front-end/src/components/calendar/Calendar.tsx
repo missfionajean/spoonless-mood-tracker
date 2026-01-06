@@ -5,7 +5,7 @@
 
 import "./Calendar.css";
 import { useState } from "react";
-import sampleMonthData from "./SampleMonthData";
+import sampleMonthData from "../sample-data/SampleMonthData";
 
 export default function Calendar() {
 	// variables for dynamic calendar rendering

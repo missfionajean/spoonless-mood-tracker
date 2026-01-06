@@ -1,5 +1,5 @@
-import Calendar from "./Calendar";
-import DayTray from "./DayTray";
+import Calendar from "./calendar/Calendar";
+import DayTray from "./day-tray/DayTray";
 
 // this is the main page of the app (once logged in)
 function Dashboard() {
@@ -16,9 +16,11 @@ function Dashboard() {
 			}}
 		>
 			<div
-				style={{
-					// border: "1px solid white",
-				}}
+				style={
+					{
+						// border: "1px solid white",
+					}
+				}
 			>
 				<Calendar />
 			</div>

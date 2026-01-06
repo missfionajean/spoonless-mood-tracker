@@ -5,8 +5,14 @@ import { useState } from "react";
 import EmotionPicker from "./EmotionPicker";
 
 export default function DayTray() {
-    // state variables for notes field
-    const [notes, setNotes] = useState("");
+	// state variables for daily user data (will be lifted later)
+	const [dayNotes, setDayNotes] = useState("");
+	// array will hold between 0 and 3 moods and render using a map
+	// const [savedEmotions, setSavedEmotions] = useState([
+	// 	{ id: "1", src: "1.png" },
+	// 	{ id: "2", src: "2.png" },
+	// 	{ id: "3", src: "3.png" },
+	// ]);
 
 	return (
 		<div
@@ -35,8 +41,8 @@ export default function DayTray() {
 					borderRadius: "10px",
 				}}
 				placeholder={"Add a note here (Optional)"}
-                value={notes}
-                onChange={(e) => setNotes(e.target.value)}
+				value={dayNotes}
+				onChange={(e) => setDayNotes(e.target.value)}
 			/>
 
 			{/* daily edit button container */}
