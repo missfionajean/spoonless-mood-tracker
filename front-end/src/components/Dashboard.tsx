@@ -15,6 +15,7 @@ function Dashboard() {
 				backgroundColor: "black",
 			}}
 		>
+            {/* div can probably go away once spacing is fixed; currently using border style to troubleshoot spacing */}
 			<div
 				style={
 					{

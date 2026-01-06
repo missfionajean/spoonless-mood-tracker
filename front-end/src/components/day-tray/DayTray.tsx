@@ -52,8 +52,7 @@ export default function DayTray() {
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "center",
-					width: "360px",
-					color: "white",
+					width: "355px",
 				}}
 			>
 				<button
@@ -61,20 +60,35 @@ export default function DayTray() {
 						backgroundColor: "dimgray",
 						height: "50px",
 						width: "120px",
-						borderRadius: "10px",
+						borderRadius: "12px",
 						fontSize: "1.2em",
+                        color: "#d7d7d7ff",
 					}}
 				>
 					Clear
 				</button>
 				<button
 					style={{
+						backgroundColor: "#1e1e1eff",
+						height: "50px",
+						width: "50px",
+						borderRadius: "50%",
+						fontSize: "1.2em",
+                        fontWeight: "bold",
+                        color: "darkgray",
+					}}
+				>
+					?
+				</button>
+				<button
+					style={{
 						backgroundColor: "darkblue",
 						height: "50px",
 						width: "120px",
-						borderRadius: "10px",
+						borderRadius: "12px",
 						fontWeight: "bold",
 						fontSize: "1.2em",
+                        color: "#e2e2e2ff",
 					}}
 				>
 					Save
