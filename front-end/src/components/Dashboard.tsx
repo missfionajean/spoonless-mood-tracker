@@ -1,5 +1,5 @@
-import Calendar from "./calendar/Calendar";
-import DayTray from "./day-tray/DayTray";
+import Calendar from "./dashboard-components/calendar/Calendar";
+import DayTray from "./dashboard-components/day-tray-components/DayTray";
 
 // this is the main page of the app (once logged in)
 function Dashboard() {

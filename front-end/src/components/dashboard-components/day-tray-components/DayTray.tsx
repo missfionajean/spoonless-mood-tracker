@@ -1,8 +1,16 @@
 // this will hold the emotion wheel, notes and buttons
 // try using the react bits circular gallery widget for the emotion wheel
 // import EmotionWheel from "./EmotionWheel";
+
+/* Imports */
+
+// react imports
 import { useState } from "react";
-import EmotionPicker from "./EmotionPicker";
+
+// component imports
+import EmotionPicker from "./emotion-picker/EmotionPicker";
+
+/* Main Function */
 
 export default function DayTray() {
 	// state variables for daily user data (will be lifted later)
@@ -62,7 +70,7 @@ export default function DayTray() {
 						width: "120px",
 						borderRadius: "12px",
 						fontSize: "1.2em",
-                        color: "#d7d7d7ff",
+						color: "#d7d7d7ff",
 					}}
 				>
 					Clear
@@ -74,8 +82,8 @@ export default function DayTray() {
 						width: "50px",
 						borderRadius: "50%",
 						fontSize: "1.2em",
-                        fontWeight: "bold",
-                        color: "darkgray",
+						fontWeight: "bold",
+						color: "darkgray",
 					}}
 				>
 					?
@@ -88,7 +96,7 @@ export default function DayTray() {
 						borderRadius: "12px",
 						fontWeight: "bold",
 						fontSize: "1.2em",
-                        color: "#e2e2e2ff",
+						color: "#e2e2e2ff",
 					}}
 				>
 					Save
