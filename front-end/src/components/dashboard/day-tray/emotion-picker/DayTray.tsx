@@ -96,7 +96,7 @@ export default function DayTray() {
 						borderRadius: "12px",
 						fontWeight: "bold",
 						fontSize: "1.2em",
-						color: "#e2e2e2ff",
+						color: "#e6e6e6ff",
 					}}
 				>
 					Save
