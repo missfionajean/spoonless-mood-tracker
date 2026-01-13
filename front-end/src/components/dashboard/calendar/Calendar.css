@@ -1,0 +1,70 @@
+.full-calendar {
+	display: grid;
+	justify-content: center;
+	width: 90%;
+	padding: 1rem;
+	/* this will move to parent css later */
+	justify-self: center;
+}
+
+.month-navigator {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	justify-content: center;
+	font-size: 1.5em;
+}
+
+.month-arrows {
+	font-size: 1em;
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	background-color: dimgray;
+    text-shadow: 1px 1px 4px black;
+}
+
+.weekday-names {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.weekday-label {
+	font-weight: bold;
+	text-align: center;
+}
+
+.day-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 0.5rem;
+}
+
+.day-circle {
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	align-content: center;
+	text-align: center;
+	color: white;
+	font-size: 1.2em;
+    text-shadow: 2px 2px 8px black;
+}
+
+.day-circle-today {
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	align-content: center;
+	text-align: center;
+	border: 2.5px solid dodgerblue;
+	font-weight: bold;
+	color: white;
+	font-size: 1.2em;
+    text-shadow: 2px 2px 8px black;
+}

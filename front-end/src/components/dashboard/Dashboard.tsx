@@ -1,7 +1,11 @@
-import Calendar from "./Calendar";
-import DayTray from "./DayTray";
+/* Imports */
 
-// this is the main page of the app (once logged in)
+// component imports
+import Calendar from "./calendar/Calendar.tsx";
+import DayTray from "./day-tray/DayTray.tsx";
+
+/* Main Function */
+
 function Dashboard() {
 	return (
 		<div
@@ -15,13 +19,7 @@ function Dashboard() {
 				backgroundColor: "black",
 			}}
 		>
-			<div
-				style={{
-					// border: "1px solid white",
-				}}
-			>
-				<Calendar />
-			</div>
+			<Calendar />
 			<DayTray />
 		</div>
 	);

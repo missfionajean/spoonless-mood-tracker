@@ -5,7 +5,10 @@
 
 import "./Calendar.css";
 import { useState } from "react";
-import sampleMonthData from "./SampleMonthData";
+import sampleMonthData from "../../../helpers/SampleMonthData";
+
+// grabs gradient logic from helper folder
+import getGradient from "../../../helpers/GetGradient";
 
 export default function Calendar() {
 	// variables for dynamic calendar rendering
@@ -123,8 +126,22 @@ export default function Calendar() {
 							]
 								? // this will need to be turned into a function above (or in a separate utils file)
 								  {
-										background:
-											"conic-gradient(#8EC73F 33%, #FFC40F 66%, #02AFEF)",
+										background: getGradient(
+											userMonthData[
+												`${currentYear.toString()}-${(
+													currentMonth + 1
+												)
+													.toString()
+													.padStart(2, "0")}-${(
+													day + 1
+												)
+													.toString()
+													.padStart(
+														2,
+														"0"
+													)}` as keyof typeof userMonthData
+											].emotions
+										),
 								  }
 								: { backgroundColor: "dimgray" }
 						}
