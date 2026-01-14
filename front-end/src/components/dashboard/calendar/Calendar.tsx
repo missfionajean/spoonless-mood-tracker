@@ -8,7 +8,7 @@ import { useState } from "react";
 import sampleMonthData from "../../../helpers/SampleMonthData";
 
 // grabs gradient logic from helper folder
-import getGradient from "../../../helpers/GetGradient";
+import { getGradient } from "../../../helpers/Gradients";
 
 export default function Calendar() {
 	// variables for dynamic calendar rendering

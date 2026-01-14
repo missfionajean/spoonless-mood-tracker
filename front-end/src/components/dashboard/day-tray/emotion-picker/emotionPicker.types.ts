@@ -3,4 +3,8 @@ type SpinnerImage = {
     src: string; // path from /public
 };
 
-export type { SpinnerImage };
+type PreviewWheelProps = {
+	selected: { id: string; src: string }[];
+};
+
+export type { SpinnerImage, PreviewWheelProps };

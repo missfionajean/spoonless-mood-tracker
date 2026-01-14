@@ -69,7 +69,7 @@ export default function DayTray() {
 						height: "50px",
 						width: "120px",
 						borderRadius: "12px",
-						fontSize: "1.2em",
+						fontSize: "1.25em",
 						color: "#d7d7d7ff",
 					}}
 				>
@@ -81,8 +81,8 @@ export default function DayTray() {
 						height: "50px",
 						width: "50px",
 						borderRadius: "50%",
-						fontSize: "1.2em",
-						fontWeight: "bold",
+						fontSize: "1.25em",
+						fontWeight: "400",
 						color: "darkgray",
 					}}
 				>
@@ -94,9 +94,9 @@ export default function DayTray() {
 						height: "50px",
 						width: "120px",
 						borderRadius: "12px",
-						fontWeight: "bold",
-						fontSize: "1.2em",
-						color: "#e2e2e2ff",
+						fontWeight: "450",
+						fontSize: "1.25em",
+						color: "#f2f2f2ff",
 					}}
 				>
 					Save
