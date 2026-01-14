@@ -12,7 +12,7 @@
 import { useState } from "react";
 
 // component imports
-import ColorPreview from "./ColorPreview.tsx";
+import PreviewWheel from "./PreviewWheel.tsx";
 import SpoonWheel from "./SpoonWheel.tsx";
 
 // type imports
@@ -59,7 +59,7 @@ export default function EmotionPicker() {
 				// border: "1px solid white",
 			}}
 		>
-			<ColorPreview radius={radius} colors={colors} selected={selected} />
+			<PreviewWheel selected={selected} />
 			<SpoonWheel
 				images={IMAGES}
 				selected={selected}
