@@ -1,9 +1,12 @@
 // THIS NEEDS TO BE SIMPLIFIED AS MUCH AS POSSIBLE; RIGHT NOW, IT'S UNWIELDY AND HARD TO ADJUST - NEXT STEPS SHOULD BE CREATING CLEARER LOGIC, EVEN IF IT TAKES MORE LINES OF CODE (THIS LOGIC CAN BE STORED IN A SEPARATE FILE AND IMPORTED)
 
-/* Helper Imports */
+/* Imports */
+
+// helper imports
+import sampleMonthData from '../../../../helpers/SampleMonthData.ts';
 import { getPreview } from '../../../../helpers/Gradients';
 
-/* Type Imports */
+// type imports
 import type { PreviewWheelProps } from './emotionPicker.types.ts';
 
 /* Main Function */

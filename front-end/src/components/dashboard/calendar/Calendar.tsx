@@ -11,16 +11,21 @@ import "./Calendar.css";
 // react imports
 import { useState } from "react";
 
-
 // type imports
 import type { CalendarProps } from "./calendarTypes";
 
 // helper imports
+import renderDayCircle from "../../../helpers/RenderDayCircle";
 import { getGradient } from "../../../helpers/Gradients";
 
 /* Main Function */
 
-export default function Calendar({ selectedDate, setSelectedDate, userMonthData }: CalendarProps) {
+export default function Calendar({
+	todaysDate,
+	selectedDate,
+	setSelectedDate,
+	userMonthData,
+}: CalendarProps) {
 	// variables for dynamic calendar rendering
 	const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -40,9 +45,8 @@ export default function Calendar({ selectedDate, setSelectedDate, userMonthData 
 	];
 
 	// set today's date and get current month and year in a state variable
-	const currentDate = new Date();
-	const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
-	const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
+	const [currentMonth, setCurrentMonth] = useState(todaysDate.getMonth());
+	const [currentYear, setCurrentYear] = useState(todaysDate.getFullYear());
 
 	// creates date object to get no. of days in month
 	const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -75,9 +79,9 @@ export default function Calendar({ selectedDate, setSelectedDate, userMonthData 
 	};
 
 	// debugging logs for date objects
-	console.log("GetDate:", currentDate.getDate());
-	console.log("GetMonth:", currentDate.getMonth());
-	console.log("GetFullYear:", currentDate.getFullYear());
+	console.log("GetDate:", todaysDate.getDate());
+	console.log("GetMonth:", todaysDate.getMonth());
+	console.log("GetFullYear:", todaysDate.getFullYear());
 
 	return (
 		<div className="full-calendar">
@@ -108,16 +112,14 @@ export default function Calendar({ selectedDate, setSelectedDate, userMonthData 
 					<span
 						key={day + 1}
 						// uses ternary to split days into two different CSS classes, so you can render them differently (may need to contain a function stored above, so that you can create a third class for selected day)
-						className={
-							day + 1 === currentDate.getDate() &&
-							currentMonth === currentDate.getMonth() &&
-							currentYear === currentDate.getFullYear()
-								? "day-circle-today"
-								: "day-circle"
-						}
+						className={renderDayCircle(
+							day,
+							todaysDate,
+							selectedDate
+						)}
 						// adds CSS colors for days with data, gray if none
 						style={
-							// refine this later to be less AI-like
+							// refine this later to be less convoluted
 							userMonthData[
 								`${currentYear.toString()}-${(currentMonth + 1)
 									.toString()

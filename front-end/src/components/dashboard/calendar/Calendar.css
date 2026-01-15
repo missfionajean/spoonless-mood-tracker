@@ -24,6 +24,7 @@
 	height: 2em;
 	background-color: dimgray;
     text-shadow: 1px 1px 4px black;
+    cursor: pointer;
 }
 
 .weekday-names {
@@ -54,9 +55,36 @@
 	color: white;
 	font-size: 1.2em;
     text-shadow: 2px 2px 8px black;
+    cursor: pointer;
 }
 
 .day-circle-today {
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	align-content: center;
+	text-align: center;
+	font-weight: 450;
+	color: white;
+	font-size: 1.2em;
+    text-shadow: 2px 2px 8px black;
+    cursor: pointer;
+}
+
+.day-circle-selected {
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	align-content: center;
+	text-align: center;
+	border: 2px solid dodgerblue;
+	color: white;
+	font-size: 1.2em;
+    text-shadow: 2px 2px 8px black;
+    cursor: pointer;
+}
+
+.day-circle-today-selected {
 	border-radius: 50%;
 	width: 2em;
 	height: 2em;
@@ -67,4 +95,5 @@
 	color: white;
 	font-size: 1.2em;
     text-shadow: 2px 2px 8px black;
+    cursor: pointer;
 }

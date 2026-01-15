@@ -11,13 +11,13 @@ import DayTray from "./day-tray/DayTray.tsx";
 import sampleMonthData from "../../helpers/SampleMonthData.ts";
 
 // date setup
-const currentDate = new Date();
+const todaysDate = new Date();
 
 /* Main Function */
 
 function Dashboard() {
 	// state variable for selected date
-	const [selectedDate, setSelectedDate] = useState<Date | null>(currentDate);
+	const [selectedDate, setSelectedDate] = useState<Date | null>(todaysDate);
 
 	// state variable to hold sample data (will be replaced with API call later)
 	const [userMonthData, setUserMonthData] = useState(sampleMonthData);
@@ -36,6 +36,7 @@ function Dashboard() {
 			}}
 		>
 			<Calendar
+                todaysDate={todaysDate}
 				selectedDate={selectedDate}
 				setSelectedDate={setSelectedDate}
 				userMonthData={userMonthData}
