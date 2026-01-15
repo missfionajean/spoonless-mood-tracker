@@ -12,16 +12,15 @@ import EmotionPicker from "./emotion-picker/EmotionPicker";
 
 /* Main Function */
 
-export default function DayTray() {
+export default function DayTray({ selectedDate, userMonthData, setUserMonthData }: any) {
 	// state variables for daily user data (will be lifted later)
 	const [dayNotes, setDayNotes] = useState("");
-	// array will hold between 0 and 3 moods and render using a map
-	// const [savedEmotions, setSavedEmotions] = useState([
-	// 	{ id: "1", src: "1.png" },
-	// 	{ id: "2", src: "2.png" },
-	// 	{ id: "3", src: "3.png" },
-	// ]);
 
+    // dummy references to props to avoid lint errors
+    const val1 = selectedDate;
+    const val2 = userMonthData;
+    const val3 = setUserMonthData; 
+    
 	return (
 		<div
 			className="day-tray"
