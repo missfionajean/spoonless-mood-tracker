@@ -58,7 +58,7 @@ function getGradient(emotions: string | any[]) {
 	}
 }
 
-// preview gradient for day tray (needs id indexing)
+// preview gradient for day tray (requires id indexing)
 function getPreview(emotions: string | any[]) {
     // three emotions selected
     if (emotions.length === 3) {
@@ -69,9 +69,9 @@ function getPreview(emotions: string | any[]) {
         // three color gradient (starts at 3/4 turn for half circle rendering)
         return `conic-gradient(
         from 0.75turn at 50% 52%,
-        ${color1} 35deg,
+        ${color1} 30deg,
         ${color2} 60deg 120deg,
-        ${color3} 145deg 180deg
+        ${color3} 150deg 180deg
         )`;
     }
 

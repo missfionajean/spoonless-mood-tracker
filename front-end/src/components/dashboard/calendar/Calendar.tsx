@@ -3,14 +3,24 @@
 // re-render calendar only when an update happens (put in logic to not do anything if no changes are made and submit is clicked)
 // make sure there's also loading states and progress trackers (spinning wheel, progress bar, etc.) for when API calls are made
 
-import "./Calendar.css";
-import { useState } from "react";
-import sampleMonthData from "../../../helpers/SampleMonthData";
+/* Imports */
 
-// grabs gradient logic from helper folder
+// style imports
+import "./Calendar.css";
+
+// react imports
+import { useState } from "react";
+
+
+// type imports
+import type { CalendarProps } from "./calendarTypes";
+
+// helper imports
 import { getGradient } from "../../../helpers/Gradients";
 
-export default function Calendar() {
+/* Main Function */
+
+export default function Calendar({ selectedDate, setSelectedDate, userMonthData }: CalendarProps) {
 	// variables for dynamic calendar rendering
 	const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -33,9 +43,6 @@ export default function Calendar() {
 	const currentDate = new Date();
 	const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
 	const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
-
-	// state variable for selected date (may need to be lifted to parent component)
-	const [selectedDate, setSelectedDate] = useState<Date | null>(currentDate);
 
 	// creates date object to get no. of days in month
 	const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -71,9 +78,6 @@ export default function Calendar() {
 	console.log("GetDate:", currentDate.getDate());
 	console.log("GetMonth:", currentDate.getMonth());
 	console.log("GetFullYear:", currentDate.getFullYear());
-
-	// state variable to hold sample data (will be replaced with API call later)
-	const [userMonthData, setUserMonthData] = useState(sampleMonthData);
 
 	return (
 		<div className="full-calendar">
