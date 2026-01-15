@@ -10,11 +10,14 @@ import { useState } from "react";
 // component imports
 import EmotionPicker from "./emotion-picker/EmotionPicker";
 
+// helper imports
+import sampleMonthData from "../../../helpers/SampleMonthData";
+
 /* Main Function */
 
 export default function DayTray({ selectedDate, userMonthData, setUserMonthData }: any) {
 	// state variables for daily user data (will be lifted later)
-	const [dayNotes, setDayNotes] = useState("");
+	const [dayNotes, setDayNotes] = useState(selectedDate ? sampleMonthData[selectedDate.toISOString().split("T")[0] as keyof typeof sampleMonthData]?.notes || "" : "");
 
     // dummy references to props to avoid lint errors
     const val1 = selectedDate;
