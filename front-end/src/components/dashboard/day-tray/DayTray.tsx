@@ -10,20 +10,30 @@ import { useState } from "react";
 // component imports
 import EmotionPicker from "./emotion-picker/EmotionPicker";
 
+// type imports
+import type { DayTrayProps } from "./dayTrayTypes";
+
 // helper imports
 import sampleMonthData from "../../../helpers/SampleMonthData";
 
 /* Main Function */
 
-export default function DayTray({ selectedDate, userMonthData, setUserMonthData }: any) {
+export default function DayTray({
+	selectedDate,
+	userMonthData,
+	setUserMonthData,
+}: DayTrayProps) {
 	// state variables for daily user data (will be lifted later)
-	const [dayNotes, setDayNotes] = useState(selectedDate ? sampleMonthData[selectedDate.toISOString().split("T")[0] as keyof typeof sampleMonthData]?.notes || "" : "");
+	const [dayNotes, setDayNotes] = useState(
+		selectedDate
+			? userMonthData[
+					selectedDate
+						.toISOString()
+						.split("T")[0] as keyof typeof userMonthData
+				]?.notes || ""
+			: "",
+	);
 
-    // dummy references to props to avoid lint errors
-    const val1 = selectedDate;
-    const val2 = userMonthData;
-    const val3 = setUserMonthData; 
-    
 	return (
 		<div
 			className="day-tray"
@@ -35,7 +45,11 @@ export default function DayTray({ selectedDate, userMonthData, setUserMonthData 
 			}}
 		>
 			{/* wheel needs to be in its own file */}
-			<EmotionPicker />
+			<EmotionPicker
+				selectedDate={selectedDate}
+				userMonthData={userMonthData}
+				setUserMonthData={setUserMonthData}
+			/>
 
 			{/* notes input doesn't need own file */}
 			<label htmlFor="notes-input"></label>

@@ -17,6 +17,7 @@ import SpoonWheel from "./SpoonWheel.tsx";
 
 // type imports
 import type { SpinnerImage } from "./emotionPicker.types.ts";
+import type { EmotionPickerProps } from "./emotionPicker.types.ts";
 
 /* Prototype of color rendering logic */
 
@@ -45,8 +46,17 @@ const IMAGES: SpinnerImage[] = [
 const radius = 140;
 const diameter = radius * 2;
 
-export default function EmotionPicker() {
+export default function EmotionPicker({
+    selectedDate,
+    userMonthData,
+    setUserMonthData,
+}: EmotionPickerProps) {
 	const [selected, setSelected] = useState<SpinnerImage[]>([]);
+
+    // dummy references to props to avoid lint errors
+    const val1 = selectedDate;
+    const val2 = userMonthData;
+    const val3 = setUserMonthData;
 
 	return (
 		<div
