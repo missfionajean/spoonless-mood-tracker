@@ -7,4 +7,10 @@ type PreviewWheelProps = {
 	selected: { id: string; src: string }[];
 };
 
-export type { SpinnerImage, PreviewWheelProps };
+type EmotionPickerProps = {
+    selectedDate: Date | null;
+    userMonthData: any;
+    setUserMonthData: (data: any) => void;
+};
+
+export type { SpinnerImage, PreviewWheelProps, EmotionPickerProps };
