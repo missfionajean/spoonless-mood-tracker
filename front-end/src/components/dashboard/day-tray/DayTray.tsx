@@ -13,9 +13,6 @@ import EmotionPicker from "./emotion-picker/EmotionPicker";
 // type imports
 import type { DayTrayProps } from "./dayTrayTypes";
 
-// helper imports
-import sampleMonthData from "../../../helpers/SampleMonthData";
-
 /* Main Function */
 
 export default function DayTray({

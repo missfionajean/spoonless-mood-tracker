@@ -31,18 +31,6 @@ const colors: Record<string, string> = {
 	"7": "#EC1D25",
 	"8": "#FFC40F",
 };
-
-const IMAGES: SpinnerImage[] = [
-	{ id: "1", src: "1.png" },
-	{ id: "2", src: "2.png" },
-	{ id: "3", src: "3.png" },
-	{ id: "4", src: "4.png" },
-	{ id: "5", src: "5.png" },
-	{ id: "6", src: "6.png" },
-	{ id: "7", src: "7.png" },
-	{ id: "8", src: "8.png" },
-];
-
 const radius = 140;
 const diameter = radius * 2;
 
@@ -71,7 +59,6 @@ export default function EmotionPicker({
 		>
 			<PreviewWheel selected={selected} />
 			<SpoonWheel
-				images={IMAGES}
 				selected={selected}
 				setSelected={setSelected}
 				radius={radius}

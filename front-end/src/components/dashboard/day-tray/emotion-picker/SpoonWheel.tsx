@@ -4,16 +4,15 @@
 import React, { useState, useRef } from "react";
 
 // type imports
-import type { SpinnerImage } from "./emotionPicker.types.ts"
+import type { SpinnerImage } from "./emotionPicker.types.ts";
 
 /* Local Types */
 
 type SpoonWheelProps = {
-	images: SpinnerImage[];
 	selected: SpinnerImage[];
 	setSelected: React.Dispatch<React.SetStateAction<SpinnerImage[]>>;
-    radius: number
-    diameter: number;
+	radius: number;
+	diameter: number;
 };
 
 /* Helpers */
@@ -25,12 +24,23 @@ const normalize = (deg: number) => ((deg % 360) + 360) % 360;
 /* Main Component */
 
 export default function SpoonWheel({
-	images,
 	selected,
 	setSelected,
-    radius,
-    diameter
+	radius,
+	diameter,
 }: SpoonWheelProps) {
+	// image array to populate spinning wheel
+	const images: SpinnerImage[] = [
+		{ id: "1", src: "1.png" },
+		{ id: "2", src: "2.png" },
+		{ id: "3", src: "3.png" },
+		{ id: "4", src: "4.png" },
+		{ id: "5", src: "5.png" },
+		{ id: "6", src: "6.png" },
+		{ id: "7", src: "7.png" },
+		{ id: "8", src: "8.png" },
+	];
+
 	/* Selection Logic */
 
 	// controls which images in wheel are selected
@@ -101,8 +111,8 @@ export default function SpoonWheel({
 				const baseAngle = -90 + index * step;
 				const angle = normalize(baseAngle + rotation);
 
-                const centerX = radius;
-                const centerY = radius;
+				const centerX = radius;
+				const centerY = radius;
 
 				const x = centerX + radius * Math.cos(degToRad(angle));
 				const y = centerY + radius * Math.sin(degToRad(angle));
