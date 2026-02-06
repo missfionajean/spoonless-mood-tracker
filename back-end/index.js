@@ -3,18 +3,22 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 // Express App Setup
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Environment Variables
+const DBPASS = process.env.DBPASS;
+
 // MySQL Database Connection
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'password',
-  database: 'your_database_name'
+  password: DBPASS,
+  database: 'spoonless_test'
 });
 
 db.connect((err) => {
