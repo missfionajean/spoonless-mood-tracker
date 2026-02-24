@@ -11,6 +11,18 @@ const colors: Record<string, string> = {
 	"7": "#EC1D25",
 	"8": "#FFC40F",
 };
+
+1 - Excited (Green)
+2 - Happy (Teal)
+3 - Calm (Light Blue)
+4 - Bored (Dark Blue)
+5 - Depressed (Purple)
+6 - Sad (Pink)
+7 - Angry (Red)
+8 - Tense (Yellow)
+
+Think about how you want to present these categories to the users, since "happy" and "sad" are loaded terms. Doing a spoon mascot image/emoji would be the preference, with more info when you click the help icon.
+
 */
 
 const sampleMonthData = {
