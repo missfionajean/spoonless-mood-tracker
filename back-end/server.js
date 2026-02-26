@@ -1,8 +1,8 @@
 // Required Modules
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-require('dotenv').config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+require("dotenv").config();
 
 // Route Imports
 const userRoutes = require("./routes/userRoutes");
@@ -11,8 +11,17 @@ const dayRoutes = require("./routes/dayRoutes");
 // Express App Setup
 const app = express();
 
+// Cors Options
+const corsOptions = {
+    // current route for front end development, update once deployed
+	origin: "http://localhost:5173",
+	methods: ["GET", "POST", "PUT", "DELETE"],
+	// update once sessions are implemented
+	credentials: false,
+};
+
 // Middleware Setup
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Route Setup

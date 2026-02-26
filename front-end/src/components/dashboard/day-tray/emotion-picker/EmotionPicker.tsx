@@ -35,16 +35,16 @@ const radius = 140;
 const diameter = radius * 2;
 
 export default function EmotionPicker({
-    selectedDate,
-    userMonthData,
-    setUserMonthData,
+	selectedDate,
+	userMonthData,
+	setUserMonthData,
 }: EmotionPickerProps) {
 	const [selected, setSelected] = useState<SpinnerImage[]>([]);
 
-    // dummy references to props to avoid lint errors
-    const val1 = selectedDate;
-    const val2 = userMonthData;
-    const val3 = setUserMonthData;
+	// dummy references to props to avoid lint errors
+	const val1 = selectedDate;
+	const val2 = userMonthData;
+	const val3 = setUserMonthData;
 
 	return (
 		<div

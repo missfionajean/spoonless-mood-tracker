@@ -58,14 +58,14 @@ export default function Calendar({
 	const prevMonth = () => {
 		setCurrentMonth((prevMonth) => (prevMonth === 0 ? 11 : prevMonth - 1));
 		setCurrentYear((prevYear) =>
-			currentMonth === 0 ? prevYear - 1 : prevYear
+			currentMonth === 0 ? prevYear - 1 : prevYear,
 		);
 	};
 
 	const nextMonth = () => {
 		setCurrentMonth((prevMonth) => (prevMonth === 11 ? 0 : prevMonth + 1));
 		setCurrentYear((prevYear) =>
-			currentMonth === 11 ? prevYear + 1 : prevYear
+			currentMonth === 11 ? prevYear + 1 : prevYear,
 		);
 	};
 
@@ -115,7 +115,7 @@ export default function Calendar({
 						className={renderDayCircle(
 							day,
 							todaysDate,
-							selectedDate
+							selectedDate,
 						)}
 						// adds CSS colors for days with data, gray if none
 						style={
@@ -127,11 +127,11 @@ export default function Calendar({
 									.toString()
 									.padStart(
 										2,
-										"0"
+										"0",
 									)}` as keyof typeof userMonthData
 							]
 								? // this will need to be turned into a function above (or in a separate utils file)
-								  {
+									{
 										background: getGradient(
 											userMonthData[
 												`${currentYear.toString()}-${(
@@ -144,11 +144,11 @@ export default function Calendar({
 													.toString()
 													.padStart(
 														2,
-														"0"
+														"0",
 													)}` as keyof typeof userMonthData
-											].emotions
+											].emotions,
 										),
-								  }
+									}
 								: { backgroundColor: "dimgray" }
 						}
 						// add 1 because days are 0 indexed

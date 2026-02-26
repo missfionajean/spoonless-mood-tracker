@@ -1,6 +1,6 @@
 type SpinnerImage = {
-    id: string;
-    src: string; // path from /public
+	id: string;
+	src: string; // path from /public
 };
 
 type PreviewWheelProps = {
@@ -8,9 +8,9 @@ type PreviewWheelProps = {
 };
 
 type EmotionPickerProps = {
-    selectedDate: Date | null;
-    userMonthData: any;
-    setUserMonthData: (data: any) => void;
+	selectedDate: Date | null;
+	userMonthData: any;
+	setUserMonthData: (data: any) => void;
 };
 
 export type { SpinnerImage, PreviewWheelProps, EmotionPickerProps };
