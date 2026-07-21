@@ -3,6 +3,10 @@
 A low-commitment, browser-based mood tracking app designed for people who don't have the mental energy
 for complex self-monitoring tools.
 
+Combination of previous builds:
+[Mental Health Tracker](https://github.com/missfionajean/mental-health-tracker)
+[KeepUp Social Tracker](https://github.com/missfionajean/keepup-social-tracker)
+
 The name comes from [Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory) — a framework commonly
 used in chronic illness and neurodivergent communities to describe limited daily energy. Spoonless is
 built around the idea that tracking your mental health shouldn't cost you the energy you're trying
